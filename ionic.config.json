@@ -1,0 +1,7 @@
+{
+  "name": "investment-tracker-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

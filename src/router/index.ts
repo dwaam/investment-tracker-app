@@ -5,27 +5,31 @@ import TabsPage from '../views/TabsPage.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/section/summary'
   },
   {
-    path: '/tabs/',
+    path: '/section/',
     component: TabsPage,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/section/summary'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        path: 'summary',
+        component: () => import('@/views/Summary.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        path: 'crypto',
+        component: () => import('@/views/Crypto.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        path: 'bank',
+        component: () => import('@/views/Bank.vue')
+      },
+      {
+        path: 'stock',
+        component: () => import('@/views/Stock.vue')
       }
     ]
   }
